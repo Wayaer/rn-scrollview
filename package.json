@@ -3,14 +3,14 @@
   "version": "3.0.0",
   "description": "A  (iOS & Android)  ScrollView",
   "main": "index.js",
-  "pod": "ios/RNScrollView",
+  "pod": "RNScrollView",
   "homepage": "https://github.com/Wayaer/rn-scrollview",
   "license": "license",
+  "author": "Wayaer",
   "scripts": {
     "npmPublish": "npm publish",
     "npmUnPublish": "npm unpublish rn-scrollview@3.0.0"
   },
-  "author": "Wayaer",
   "devDependencies": {
     "prop-types": "^15.7.2",
     "react": "16.13.1",
