@@ -1,0 +1,19 @@
+{
+  "name": "rn-scrollview",
+  "version": "2.2.2",
+  "description": "A  (iOS & Android)  ScrollView",
+  "main": "index.js",
+  "scripts": {
+    "npmPublish": "npm publish",
+    "npmUnPublish": "npm unpublish rn-scrollview@2.2.1"
+  },
+  "author": {
+    "name": "kingbob",
+    "prop-types": "^15.7.2"
+  },
+  "devDependencies": {
+    "prop-types": "^15.7.2",
+    "react": "16.13.1",
+    "react-native": "^0.63.3"
+  }
+}
