@@ -10,7 +10,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface ScrollView : RCTScrollView
+@interface RNScrollView : RCTScrollView
 
 -(void)endRefresh;
 - (void)endLoading;

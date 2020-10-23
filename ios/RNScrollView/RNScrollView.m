@@ -1,6 +1,6 @@
-#import "ScrollView.h"
+#import "RNScrollView.h"
 
-@interface ScrollView ()
+@interface RNScrollView ()
 @property(nonatomic, assign) float refreshHeaderHeight;
 @property(nonatomic, assign) float loadingFooterHeight;
 //@property(nonatomic, assign) UIEdgeInsets orgInsets;
@@ -11,7 +11,7 @@
 @property(nonatomic, assign) BOOL initialed;
 @end
 
-@implementation ScrollView
+@implementation RNScrollView
 
 - (instancetype)initWithEventDispatcher:(RCTEventDispatcher *)eventDispatcher{
     if (self=[super initWithEventDispatcher:eventDispatcher]) {

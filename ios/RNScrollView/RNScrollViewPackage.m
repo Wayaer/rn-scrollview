@@ -3,13 +3,14 @@
 #import <React/RCTBridge.h>
 #import <React/RCTUIManager.h>
 
+
 @interface RCTBridge ()
 - (RCTUIManager *)uiManager;
 @end
 
 @implementation RNScrollViewPackage
 
-RCT_EXPORT_MODULE(SpringScrollView)
+RCT_EXPORT_MODULE(RNScrollView)
 RCT_EXPORT_VIEW_PROPERTY(refreshHeaderHeight, float)
 RCT_EXPORT_VIEW_PROPERTY(loadingFooterHeight, float)
 RCT_EXPORT_VIEW_PROPERTY(initialContentOffset, id)
@@ -45,7 +46,3 @@ RCT_EXPORT_METHOD(scrollTo:(nonnull NSNumber *)reactTag offsetX:(CGFloat)offsetX
 }
 
 @end
-
-
-
-

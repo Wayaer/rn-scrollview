@@ -1,4 +1,4 @@
-export * from "./src/SpringScrollView";
+export * from "./src/RNScrollView";
 export * from "./src/Types";
 export * from "./src/HeaderAndLoading";
 export * from "./src/Normal";

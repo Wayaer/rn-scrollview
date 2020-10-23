@@ -81,7 +81,7 @@ declare module "rn-scrollview" {
 
   export class NormalFooter extends LoadingFooter {}
 
-  export interface SpringScrollViewPropType extends ViewProps {
+  export interface RNScrollViewPropType extends ViewProps {
     contentStyle?: ViewStyle;
     bounces?: boolean;
     scrollEnabled?: boolean;
@@ -107,7 +107,7 @@ declare module "rn-scrollview" {
     onSizeChange?: (size:Size) => any;
     onContentSizeChange?: (size: Size) => any;
   }
-  export class SpringScrollView extends React.PureComponent<SpringScrollViewPropType> {
+  export class RNScrollView extends React.PureComponent<RNScrollViewPropType> {
     scrollTo(offset: Offset, animated?: boolean): Promise<void>;
     scroll(offset: Offset, animated?: boolean): Promise<void>;
     scrollToBegin(animated?: boolean): Promise<void>;

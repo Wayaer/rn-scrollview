@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8E1C9AC721F57FA4008C7B52 /* STSpringScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1C9AC621F57FA4008C7B52 /* STSpringScrollView.m */; };
-		8E1C9ACA21F5803B008C7B52 /* STSpringScrollViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1C9AC921F5803B008C7B52 /* STSpringScrollViewManager.m */; };
-		8E1C9AD021F5810F008C7B52 /* STSpringScrollContentViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1C9ACF21F5810F008C7B52 /* STSpringScrollContentViewManager.m */; };
+		14D34E072542C5BB00ED7D22 /* RNScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D34E042542C5BB00ED7D22 /* RNScrollView.m */; };
+		14D34E082542C5BB00ED7D22 /* RNScrollViewPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D34E052542C5BB00ED7D22 /* RNScrollViewPackage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,13 +24,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		134814201AA4EA6300B7C361 /* libRNSpringScrollView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNSpringScrollView.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		8E1C9AC521F57FA4008C7B52 /* STSpringScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STSpringScrollView.h; sourceTree = "<group>"; };
-		8E1C9AC621F57FA4008C7B52 /* STSpringScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STSpringScrollView.m; sourceTree = "<group>"; };
-		8E1C9AC821F5803B008C7B52 /* STSpringScrollViewManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STSpringScrollViewManager.h; sourceTree = "<group>"; };
-		8E1C9AC921F5803B008C7B52 /* STSpringScrollViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STSpringScrollViewManager.m; sourceTree = "<group>"; };
-		8E1C9ACE21F5810F008C7B52 /* STSpringScrollContentViewManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STSpringScrollContentViewManager.h; sourceTree = "<group>"; };
-		8E1C9ACF21F5810F008C7B52 /* STSpringScrollContentViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STSpringScrollContentViewManager.m; sourceTree = "<group>"; };
+		14D34E002542C5BB00ED7D22 /* RNScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNScrollView.h; sourceTree = "<group>"; };
+		14D34E032542C5BB00ED7D22 /* RNScrollViewPackage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNScrollViewPackage.h; sourceTree = "<group>"; };
+		14D34E042542C5BB00ED7D22 /* RNScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNScrollView.m; sourceTree = "<group>"; };
+		14D34E052542C5BB00ED7D22 /* RNScrollViewPackage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNScrollViewPackage.m; sourceTree = "<group>"; };
+		14D34E192542C5EF00ED7D22 /* libRNRNScrollView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libRNRNScrollView.a; path = "/Users/wayaer/Code/library/rn-scrollview/ios/build/Debug-iphoneos/libRNRNScrollView.a"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,41 +42,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		134814211AA4EA7D00B7C361 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				134814201AA4EA6300B7C361 /* libRNSpringScrollView.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-				8E1C9AB421F57BD3008C7B52 /* SpringScrollView */,
-				134814211AA4EA7D00B7C361 /* Products */,
+				8E1C9AB421F57BD3008C7B52 /* RNScrollView */,
 			);
 			sourceTree = "<group>";
 		};
-		8E1C9AB421F57BD3008C7B52 /* SpringScrollView */ = {
+		8E1C9AB421F57BD3008C7B52 /* RNScrollView */ = {
 			isa = PBXGroup;
 			children = (
-				8E1C9AC521F57FA4008C7B52 /* STSpringScrollView.h */,
-				8E1C9AC621F57FA4008C7B52 /* STSpringScrollView.m */,
-				8E1C9AC821F5803B008C7B52 /* STSpringScrollViewManager.h */,
-				8E1C9AC921F5803B008C7B52 /* STSpringScrollViewManager.m */,
-				8E1C9ACE21F5810F008C7B52 /* STSpringScrollContentViewManager.h */,
-				8E1C9ACF21F5810F008C7B52 /* STSpringScrollContentViewManager.m */,
+				14D34E032542C5BB00ED7D22 /* RNScrollViewPackage.h */,
+				14D34E052542C5BB00ED7D22 /* RNScrollViewPackage.m */,
+				14D34E002542C5BB00ED7D22 /* RNScrollView.h */,
+				14D34E042542C5BB00ED7D22 /* RNScrollView.m */,
 			);
-			path = SpringScrollView;
+			path = RNScrollView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		58B511DA1A9E6C8500147676 /* RNSpringScrollView */ = {
+		58B511DA1A9E6C8500147676 /* RNScrollView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "RNSpringScrollView" */;
+			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "RNScrollView" */;
 			buildPhases = (
 				58B511D71A9E6C8500147676 /* Sources */,
 				58B511D81A9E6C8500147676 /* Frameworks */,
@@ -89,9 +75,9 @@
 			);
 			dependencies = (
 			);
-			name = RNSpringScrollView;
+			name = RNScrollView;
 			productName = RCTDataManager;
-			productReference = 134814201AA4EA6300B7C361 /* libRNSpringScrollView.a */;
+			productReference = 14D34E192542C5EF00ED7D22 /* libRNRNScrollView.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -108,7 +94,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "RNSpringScrollView" */;
+			buildConfigurationList = 58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "RNScrollView" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -121,7 +107,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				58B511DA1A9E6C8500147676 /* RNSpringScrollView */,
+				58B511DA1A9E6C8500147676 /* RNScrollView */,
 			);
 		};
 /* End PBXProject section */
@@ -131,9 +117,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E1C9AC721F57FA4008C7B52 /* STSpringScrollView.m in Sources */,
-				8E1C9AD021F5810F008C7B52 /* STSpringScrollContentViewManager.m in Sources */,
-				8E1C9ACA21F5803B008C7B52 /* STSpringScrollViewManager.m in Sources */,
+				14D34E082542C5BB00ED7D22 /* RNScrollViewPackage.m in Sources */,
+				14D34E072542C5BB00ED7D22 /* RNScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,7 +171,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -232,7 +217,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -250,7 +235,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = RNSpringScrollView;
+				PRODUCT_NAME = RNRNScrollView;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -266,7 +251,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = RNSpringScrollView;
+				PRODUCT_NAME = RNRNScrollView;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -274,7 +259,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "RNSpringScrollView" */ = {
+		58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "RNScrollView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				58B511ED1A9E6C8500147676 /* Debug */,
@@ -283,7 +268,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "RNSpringScrollView" */ = {
+		58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "RNScrollView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				58B511F01A9E6C8500147676 /* Debug */,
