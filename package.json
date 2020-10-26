@@ -1,6 +1,6 @@
 {
   "name": "rn-scrollview",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "description": "A plug-in based on native ScrollView encapsulation supports Android and IOS",
   "main": "index.js",
   "pod": "RNScrollView",
@@ -9,7 +9,7 @@
   "author": "Wayaer",
   "scripts": {
     "npmPublish": "npm publish",
-    "npmUnPublish": "npm unpublish rn-scrollview@3.0.3"
+    "npmUnPublish": "npm unpublish rn-scrollview@3.0.4"
   },
   "dependencies": {
     "prop-types": "^15.7.2"

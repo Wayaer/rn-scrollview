@@ -1,5 +1,5 @@
 #import "RNScrollViewPackage.h"
-#import "ScrollView.h"
+#import "RNScrollView.h"
 #import <React/RCTBridge.h>
 #import <React/RCTUIManager.h>
 
@@ -18,13 +18,13 @@ RCT_EXPORT_VIEW_PROPERTY(allLoaded, BOOL)
 
 - (UIView *)view
 {
-    return [[ScrollView alloc] initWithEventDispatcher:self.bridge.eventDispatcher];
+    return [[RNScrollView alloc] initWithEventDispatcher:self.bridge.eventDispatcher];
 }
 
 RCT_EXPORT_METHOD(endRefresh:(nonnull NSNumber *)reactTag){
     [self.bridge.uiManager addUIBlock:
      ^(__unused RCTUIManager *uiManager, NSDictionary<NSNumber *, __kindof UIView *> *viewRegistry){
-         ScrollView *view = viewRegistry[reactTag];
+        RNScrollView *view = viewRegistry[reactTag];
          [view endRefresh];
      }];
 }
@@ -32,7 +32,7 @@ RCT_EXPORT_METHOD(endRefresh:(nonnull NSNumber *)reactTag){
 RCT_EXPORT_METHOD(endLoading:(nonnull NSNumber *)reactTag){
     [self.bridge.uiManager addUIBlock:
      ^(__unused RCTUIManager *uiManager, NSDictionary<NSNumber *, __kindof UIView *> *viewRegistry){
-         ScrollView *view = viewRegistry[reactTag];
+        RNScrollView *view = viewRegistry[reactTag];
          [view endLoading];
      }];
 }
@@ -40,7 +40,7 @@ RCT_EXPORT_METHOD(endLoading:(nonnull NSNumber *)reactTag){
 RCT_EXPORT_METHOD(scrollTo:(nonnull NSNumber *)reactTag offsetX:(CGFloat)offsetX offsetY:(CGFloat)offsetY animated:(BOOL) animated){
     [self.bridge.uiManager addUIBlock:
      ^(__unused RCTUIManager *uiManager, NSDictionary<NSNumber *, __kindof UIView *> *viewRegistry){
-         ScrollView *view = viewRegistry[reactTag];
+        RNScrollView *view = viewRegistry[reactTag];
          [view.scrollView setContentOffset:CGPointMake(offsetX, offsetY) animated:animated];
      }];
 }
