@@ -1,7 +1,6 @@
-import {Animated,ViewPropTypes} from "react-native";
-import {PropTypes} from 'prop-types'
-import {RefreshHeader} from "./RefreshHeader";
-import {LoadingFooter} from "./LoadingFooter";
+import {Animated, ViewPropTypes} from "react-native";
+import PropTypes from 'prop-types'
+import {RefreshHeader, LoadingFooter} from "./HeaderAndLoading";
 
 export interface IndexPath {
     section: number,
@@ -67,7 +66,7 @@ export interface RNScrollViewPropType extends ViewPropTypes {
 
 
 export interface LargeListPropType extends RNScrollViewPropType {
-    data: LargeListDataType,
+    data: LargeListPropType,
     headerStickyEnabled?: boolean,
     contentStyle?: PropTypes.object,
     directionalLockEnabled?: boolean,

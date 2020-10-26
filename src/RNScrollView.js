@@ -14,7 +14,7 @@ import {
 import * as TextInputState from "react-native/Libraries/Components/TextInput/TextInputState";
 import {FooterStatus, HeaderStatus} from "./HeaderAndLoading";
 import {NormalFooter, NormalHeader} from "./Normal";
-import {idx} from "./idx";
+import {index} from "./index";
 import type {Offset, RNScrollViewPropType} from "./Types";
 
 export const styles = StyleSheet.create({
@@ -273,7 +273,7 @@ export class RNScrollView extends React.PureComponent<RNScrollViewPropType> {
 
     _onKeyboardWillShow = evt => {
         this.props.textInputRefs.every(input => {
-            if (idx(() => input.current.isFocused())) {
+            if (index(() => input.current.isFocused())) {
                 input.current.measure((x, y, w, h, l, t) => {
                     this._keyboardHeight = t + h - evt.endCoordinates.screenY + this.props.inputToolBarHeight;
                     this._keyboardHeight > 0 && this.scroll({x: 0, y: this._keyboardHeight});
@@ -331,12 +331,12 @@ export class RNScrollView extends React.PureComponent<RNScrollViewPropType> {
 
     _toRefreshStatus(status: HeaderStatus) {
         this._refreshStatus = status;
-        idx(() => this._refreshHeader.changeToState(status));
+        index(() => this._refreshHeader.changeToState(status));
     }
 
     _toLoadingStatus(status: FooterStatus) {
         this._loadingStatus = status;
-        idx(() => this._loadingFooter.changeToState(status));
+        index(() => this._loadingFooter.changeToState(status));
     }
 
     _getVerticalIndicatorStyle() {

@@ -1,6 +1,6 @@
 import React from 'react';
 import {Animated, Dimensions, StyleSheet} from 'react-native';
-import {idx} from '../idx';
+import {index} from '../index';
 import type {IndexPath, LargeListPropType, Offset} from '../Types'
 import {Group} from './Group';
 import {Section} from './Section';
@@ -80,7 +80,7 @@ export class LargeList extends BaseComponent<LargeListPropType> {
         const sectionIndexes = [];
         const sections = [0];
         let sumHeight = this._headerLayout ? this._headerLayout.height : 0;
-        const wrapperHeight = idx(() => this._size.height, 700);
+        const wrapperHeight = index(() => this._size.height, 700);
         const shouldRenderContent = this._shouldRenderContent();
         if (shouldRenderContent) {
             let currentGroupHeight = 0;
@@ -183,7 +183,7 @@ export class LargeList extends BaseComponent<LargeListPropType> {
                 inputs.forEach((input, index) => {
                     const mod = index % 5;
                     if (mod > 1 && mod < 4) {
-                        inputs[index] -= idx(() => this._headerLayout.height, 0);
+                        inputs[index] -= index(() => this._headerLayout.height, 0);
                     }
                 })
             );
@@ -418,8 +418,8 @@ export class LargeList extends BaseComponent<LargeListPropType> {
     };
 
     _onScrollEnd = () => {
-        this._groupRefs.forEach(group => idx(() => group.current.contentConversion(this._contentOffsetY)));
-        idx(() =>
+        this._groupRefs.forEach(group => index(() => group.current.contentConversion(this._contentOffsetY)));
+        index(() =>
             this._sectionRefs.forEach(sectionRef => {
                 sectionRef.current.updateOffset(this._contentOffsetY);
             })
@@ -431,7 +431,7 @@ export class LargeList extends BaseComponent<LargeListPropType> {
         const offsetY = e.nativeEvent.contentOffset.y;
         this._contentOffsetY = offsetY;
         this._shouldUpdateContent &&
-        idx(() =>
+        index(() =>
             this._sectionRefs.forEach(sectionRef => {
                 sectionRef.current.updateOffset(this._contentOffsetY);
             })
@@ -443,7 +443,7 @@ export class LargeList extends BaseComponent<LargeListPropType> {
             return;
         }
         this._lastTick = now;
-        this._shouldUpdateContent && this._groupRefs.forEach(group => idx(() => group.current.contentConversion(offsetY)));
+        this._shouldUpdateContent && this._groupRefs.forEach(group => index(() => group.current.contentConversion(offsetY)));
     };
 
     scrollTo(offset: Offset, animated: boolean = true): Promise<void> {
@@ -451,8 +451,8 @@ export class LargeList extends BaseComponent<LargeListPropType> {
             return Promise.reject('large_list has not been initialized yet!');
         }
         this._shouldUpdateContent = false;
-        this._groupRefs.forEach(group => idx(() => group.current.contentConversion(offset.y)));
-        this._sectionRefs.forEach(sectionRef => idx(() => sectionRef.current.updateOffset(offset.y)));
+        this._groupRefs.forEach(group => index(() => group.current.contentConversion(offset.y)));
+        this._sectionRefs.forEach(sectionRef => index(() => sectionRef.current.updateOffset(offset.y)));
         return this._scrollView.current.scrollTo(offset, animated).then(() => {
             this._shouldUpdateContent = true;
             return Promise.resolve();
@@ -461,7 +461,7 @@ export class LargeList extends BaseComponent<LargeListPropType> {
 
     scrollToIndexPath(indexPath: IndexPath, animated: boolean = true): Promise<void> {
         const {data, heightForSection, heightForIndexPath} = this.props;
-        let ht = idx(() => this._headerLayout.height, 0);
+        let ht = index(() => this._headerLayout.height, 0);
         for (let s = 0; s < data.length && s <= indexPath.section; ++s) {
             if (indexPath.section === s && indexPath.row === -1) {
                 break;
@@ -478,11 +478,11 @@ export class LargeList extends BaseComponent<LargeListPropType> {
     }
 
     endRefresh() {
-        idx(() => this._scrollView.current.endRefresh());
+        index(() => this._scrollView.current.endRefresh());
     }
 
     endLoading() {
-        idx(() => this._scrollView.current.endLoading());
+        index(() => this._scrollView.current.endLoading());
     }
 }
 
