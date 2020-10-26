@@ -1,7 +1,5 @@
 #import <React/RCTScrollView.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 @interface RCTScrollView()
 
 - (void)sendScrollEventWithName:(NSString *)eventName
@@ -12,9 +10,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface RNScrollView : RCTScrollView
 
--(void)endRefresh;
+- (void)endRefresh;
 - (void)endLoading;
 
 @end
-
-NS_ASSUME_NONNULL_END
