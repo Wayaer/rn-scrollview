@@ -24,11 +24,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		142589DA2546BD2300C4F02E /* libRNRNScrollView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNRNScrollView.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		14D34E002542C5BB00ED7D22 /* RNScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNScrollView.h; sourceTree = "<group>"; };
 		14D34E032542C5BB00ED7D22 /* RNScrollViewPackage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNScrollViewPackage.h; sourceTree = "<group>"; };
 		14D34E042542C5BB00ED7D22 /* RNScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNScrollView.m; sourceTree = "<group>"; };
 		14D34E052542C5BB00ED7D22 /* RNScrollViewPackage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNScrollViewPackage.m; sourceTree = "<group>"; };
-		14D34E192542C5EF00ED7D22 /* libRNRNScrollView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libRNRNScrollView.a; path = "/Users/wayaer/Code/library/rn-scrollview/ios/build/Debug-iphoneos/libRNRNScrollView.a"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +46,7 @@
 			isa = PBXGroup;
 			children = (
 				8E1C9AB421F57BD3008C7B52 /* RNScrollView */,
+				142589DA2546BD2300C4F02E /* libRNRNScrollView.a */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,7 +78,7 @@
 			);
 			name = RNScrollView;
 			productName = RCTDataManager;
-			productReference = 14D34E192542C5EF00ED7D22 /* libRNRNScrollView.a */;
+			productReference = 142589DA2546BD2300C4F02E /* libRNRNScrollView.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
