@@ -12,9 +12,9 @@ import {
     ScrollView
 } from "react-native";
 import * as TextInputState from "react-native/Libraries/Components/TextInput/TextInputState";
-import {FooterStatus, HeaderStatus} from "./list/component/HeaderAndLoading";
-import {NormalFooter, NormalHeader} from "./list/component/Normal";
-import type {Offset, RNScrollViewPropType} from "./list/component/Types";
+import {FooterStatus, HeaderStatus} from "./component/HeaderAndLoading";
+import {NormalFooter, NormalHeader} from "./component/Normal";
+import type {Offset, RNScrollViewPropType} from "./component/Types";
 
 export const styles = StyleSheet.create({
     wrapperStyle: {

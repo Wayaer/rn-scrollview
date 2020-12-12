@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Animated, Dimensions, StyleSheet} from 'react-native';
 import type {IndexPath, LargeListPropType, Offset} from './component/Types'
 import {Group, Section} from './component/SectionAndGroup';
-import {RNScrollView} from "../RNScrollView";
+import {RNScrollView} from "./RNScrollView";
 
 const screenLayout = Dimensions.get('window');
 const screenHeight = Math.max(screenLayout.width, screenLayout.height);
