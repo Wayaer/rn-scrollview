@@ -44,5 +44,8 @@ RCT_EXPORT_METHOD(scrollTo:(nonnull NSNumber *)reactTag offsetX:(CGFloat)offsetX
          [view.scrollView setContentOffset:CGPointMake(offsetX, offsetY) animated:animated];
      }];
 }
-
++ (BOOL)requiresMainQueueSetup
+{
+    return YES;
+}
 @end
