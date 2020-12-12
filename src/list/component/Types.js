@@ -132,6 +132,7 @@ export interface WaterfallListType extends RNScrollViewPropType {
     }
 }
 
+
 export interface WaterfallItemType extends WaterfallListType {
     input: number[],
     output: number[],

@@ -40,7 +40,7 @@ export class NormalFooter extends LoadingFooter {
         const {maxHeight, offset, bottomOffset} = this.props;
         return (
             <Animated.Image
-                source={require("./res/arrow.png")}
+                source={require("../../res/arrow.png")}
                 style={{
                     transform: [
                         {
@@ -110,7 +110,7 @@ export class NormalHeader extends RefreshHeader {
         const {maxHeight, offset} = this.props;
         return (
             <Animated.Image
-                source={require("./res/arrow.png")}
+                source={require("../../res/arrow.png")}
                 style={{
                     transform: [
                         {

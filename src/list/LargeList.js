@@ -1,16 +1,13 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {Animated, Dimensions, StyleSheet} from 'react-native';
-import {index} from '../index';
-import type {IndexPath, LargeListPropType, Offset} from '../Types'
-import {Group} from './Group';
-import {Section} from './Section';
-import {BaseComponent} from '../base/BaseComponent';
+import type {IndexPath, LargeListPropType, Offset} from './component/Types'
+import {Group, Section} from './component/SectionAndGroup';
 import {RNScrollView} from "../RNScrollView";
 
 const screenLayout = Dimensions.get('window');
 const screenHeight = Math.max(screenLayout.width, screenLayout.height);
 
-export class LargeList extends BaseComponent<LargeListPropType> {
+export class LargeList extends Component<LargeListPropType> {
     _groupRefs = [];
     _offset: Animated.Value;
     _scrollView = React.createRef();

@@ -1,9 +1,64 @@
-import React from 'react';
-import {StyleSheet} from 'react-native';
-import type {GroupPropType} from '../Types';
-import {BaseComponent} from "../base/BaseComponent";
+import {Animated, StyleSheet} from 'react-native';
+import React, {Component} from 'react';
+import type {GroupPropType, SectionPropType} from "./Types";
 
-export class Group extends BaseComponent<GroupPropType> {
+export class Section extends Component<SectionPropType> {
+    state = {
+        section: 0,
+    };
+
+    constructor(props) {
+        super(props);
+        let offset = props.offset;
+        if (props.initialContentOffset) {
+            offset = props.initialContentOffset.y;
+        }
+        this.updateOffset(offset, true);
+    }
+
+    componentWillReceiveProps(next: SectionPropType) {
+        this.updateOffset(next.offset, false, next);
+    }
+
+    updateOffset(offset: number, init: boolean = false, next?: SectionPropType) {
+        let index = 0;
+        if (!next) {
+            next = this.props;
+        }
+        for (let i = 0; i < next.input.length; ++i) {
+            if (offset > next.input[i]) {
+                index = i;
+            }
+        }
+        const section = next.sectionIndexes[index];
+        if (section !== this.state.section) {
+            if (init) {
+                this.state = {section};
+            } else {
+                this.setState({section});
+            }
+        }
+    }
+
+    render() {
+        const {data, style, heightForSection, renderSection, inverted} = this.props;
+        const {section} = this.state;
+        if (section === undefined || section < 0 || section >= data.length) {
+            return null;
+        }
+        const wStyle = StyleSheet.flatten([
+            style,
+            {height: heightForSection(section), transform: [...style.transform, {scaleY: inverted ? -1 : 1}]},
+        ]);
+        return (
+            <Animated.View {...this.props} style={wStyle}>
+                {renderSection(this.state.section)}
+            </Animated.View>
+        );
+    }
+}
+
+export class Group extends Component<GroupPropType> {
     _currentIndex = 0;
     _offset = 0;
     _margin = 0;

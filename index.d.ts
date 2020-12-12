@@ -107,7 +107,7 @@ declare module "rn-scrollview" {
     onSizeChange?: (size:Size) => any;
     onContentSizeChange?: (size: Size) => any;
   }
-  export class RNScrollView extends React.PureComponent<RNScrollViewPropType> {
+  export class RNScrollView extends React.Component<RNScrollViewPropType> {
     scrollTo(offset: Offset, animated?: boolean): Promise<void>;
     scroll(offset: Offset, animated?: boolean): Promise<void>;
     scrollToBegin(animated?: boolean): Promise<void>;

@@ -12,10 +12,9 @@ import {
     ScrollView
 } from "react-native";
 import * as TextInputState from "react-native/Libraries/Components/TextInput/TextInputState";
-import {FooterStatus, HeaderStatus} from "./HeaderAndLoading";
-import {NormalFooter, NormalHeader} from "./Normal";
-import {index} from "./index";
-import type {Offset, RNScrollViewPropType} from "./Types";
+import {FooterStatus, HeaderStatus} from "./list/component/HeaderAndLoading";
+import {NormalFooter, NormalHeader} from "./list/component/Normal";
+import type {Offset, RNScrollViewPropType} from "./list/component/Types";
 
 export const styles = StyleSheet.create({
     wrapperStyle: {
@@ -25,7 +24,7 @@ export const styles = StyleSheet.create({
     }
 });
 
-export class RNScrollView extends React.PureComponent<RNScrollViewPropType> {
+export class RNScrollView extends React.Component<RNScrollViewPropType> {
     _offsetY: Animated.Value;
     _offsetX: Animated.Value;
     _offsetYValue: number = 0;
@@ -527,3 +526,12 @@ const RNScrollViewNative = Animated.createAnimatedComponent(
 
 const SpringScrollContentViewNative =
     Platform.OS === "ios" ? requireNativeComponent("SpringScrollContentView") : View;
+
+export function index<T>(f: () => T, defaultValue?: T | string) {
+    try {
+        const res = f();
+        return res === null || res === undefined ? defaultValue : res;
+    } catch (e) {
+        return defaultValue;
+    }
+}

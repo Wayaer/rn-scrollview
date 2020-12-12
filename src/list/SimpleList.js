@@ -13,11 +13,10 @@
 
 import {Text, View} from 'react-native';
 import {RNScrollView} from 'rn-scrollview';
-import {BaseComponent} from '../base/BaseComponent';
-import React from 'react';
-import {ChineseWithLastDate, ChineseWithLastDateFooter} from "./ChineseWithLastDate";
+import React, {Component} from 'react';
+import {ChineseWithLastDate, ChineseWithLastDateFooter} from "./component/ChineseWithLastDate";
 
-export class SimpleList extends BaseComponent {
+export class SimpleList extends Component {
     constructor(props) {
         super(props);
         const allLoaded = props.allLoaded !== undefined ? props.allLoaded : true;

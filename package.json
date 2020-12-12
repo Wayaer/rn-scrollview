@@ -1,6 +1,6 @@
 {
   "name": "rn-scrollview",
-  "version": "3.0.8",
+  "version": "3.1.0",
   "description": "A plug-in based on native ScrollView encapsulation supports Android and IOS",
   "main": "index.js",
   "pod": "RNScrollView",
